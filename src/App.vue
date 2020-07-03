@@ -104,7 +104,28 @@
       </div>
     </div>
 
-    <div id="calendar-entry"></div>
+    <div id="calendar-entry">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-6 offset-3">
+            <div class="card">
+              <div class="card-header text-center bg-vue">
+                <h5>Neuer Termin für: <strong>Dienstag</strong></h5>
+              </div>
+              <div class="card-body">
+                <input 
+                  type="text"
+                  class="form-control"
+                  placeholder="Neuer Termin"
+                >
+                <hr>
+                <button class="btn bg-vue2 btn-block">Eintragen</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -117,6 +138,10 @@ export default {
 <style scoped>
   .bg-vue {
     background-color: rgb(52, 73, 94);
+    color: white;
+  }
+  .bg-vue2 {
+    background-color: rgb(65, 184, 131);
     color: white;
   }
 
