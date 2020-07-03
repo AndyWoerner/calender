@@ -4,7 +4,7 @@
             <div class="col-12">
                 <div class="card-group">
                     <CalendarDay 
-                        v-for="day in state.CalendarWeedData"
+                        v-for="day in state.calendarWeekData"
                         :key="day.id"
                         :day="day"
                     />
@@ -24,7 +24,6 @@ export default {
     data() {
         return {
             state: store.state,
-
         }
     },
     components: {
