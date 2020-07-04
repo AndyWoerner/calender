@@ -1,28 +1,33 @@
 <template>
   <div class="card">
-    <div class="card-header text-center bg-vue">
+    <div
+      class="card-header text-center bg-vue"
+      style="cursor: pointer"
+      @click="setActiveDay(day.id)"
+    >
       <strong>{{day.fullName }}</strong>
     </div>
     <div class="card-body">
       <div>{{ day.id }}</div>
-        <CalendarEvent 
-            v-for="(event, index) in day.events"
-            :key="index"
-            :event="event"
-            :day="day"
-        />
+      <CalendarEvent v-for="(event, index) in day.events" :key="index" :event="event" :day="day" />
     </div>
   </div>
 </template>
 
 <script>
-import CalendarEvent from "./CalendarEvent"
+import CalendarEvent from "./CalendarEvent";
+import { store } from "../store";
 
 export default {
   name: "CalendarDay",
   props: ["day"],
   components: {
-      CalendarEvent
+    CalendarEvent
+  },
+  methods: {
+    setActiveDay(dayId) {
+      store.setActiveDay(dayId);
+    }
   }
 };
 </script>

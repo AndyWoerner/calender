@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { store } from "../store";
+import { store } from "../store.js"
 import CalendarDay from "./CalendarDay"
 
 export default {
