@@ -41,5 +41,10 @@ export const store = {
         const dayObj = this.state.calendarWeekData.find( day => day.id === dayId)
         const eventIndex = dayObj.events.findIndex( event => event.title = eventTitle )
         dayObj.events.splice(eventIndex, 1)
+    },
+    emptyCalendar(){
+        this.state.calendarWeekData.map( dayObj => {
+            dayObj.events = [];
+        })
     }
 }
