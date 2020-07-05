@@ -3,7 +3,7 @@
         class="btn btn-danger btn-block"
         @click="emptyCalendar"
         >
-        <i class="fas fa-eraser"></i>Alle Termine löschen
+        <i class="fas fa-eraser"></i> Alle Termine löschen
     </button>
 </template>
 
